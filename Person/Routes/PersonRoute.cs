@@ -1,3 +1,5 @@
+using Person.Models;
+
 namespace Person.Routes;
 
 // Nesse arquivo ficará todas as rotas e métodos HTTPS da nossa aplicação;
@@ -8,6 +10,6 @@ public static class PersonRoute
     // Aqui usamos Extension Methods
     public static void PersonRoutes(this WebApplication app)
     {
-        app.MapGet("person", () => "Hello World!");
+        app.MapGet("person", () => new PersonModel("Lucas"));
     }
 }
