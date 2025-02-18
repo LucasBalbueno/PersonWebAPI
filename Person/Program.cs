@@ -1,3 +1,4 @@
+using Person.DataAccess;
 using Person.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Configuração com o Banco de dados
+builder.Services.AddScoped<PersonContext>();
 
 var app = builder.Build();
 
