@@ -22,4 +22,15 @@ public class PersonModel
     
     // O private set serve para apenas o model poder alterar/setar a propriedade.
     public string Name { get; private set; }
+
+    // função para mudar o nome
+    public void ChangeName(string name)
+    {
+        Name = name;
+    }
+
+    public void SetInactive()
+    {
+        Name = "desativado";
+    }
 }
